@@ -13,7 +13,6 @@ const uri ='mongodb+srv://npoujol:No47po89@cluster0.unen1yp.mongodb.net/assignme
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify:false
 };
 
 mongoose.connect(uri, options)
