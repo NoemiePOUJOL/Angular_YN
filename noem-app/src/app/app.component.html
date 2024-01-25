@@ -1,0 +1,40 @@
+
+<mat-toolbar color="accent">
+  <button mat-icon-button class="example-icon" aria-label="Sidebar" (click)="showSidebar = !showSidebar">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <h1><a routerLink="/home">{{title}}</a></h1>
+  <span class="example-spacer"></span>
+  <div class="right-toolbar-content">
+
+      <button mat-icon-button class="example-icon" aria-label="Maison" routerLink="/home">
+          <mat-icon>home</mat-icon>
+      </button>
+
+      <a mat-icon-button class="example-icon" aria-label="Bouton d'identification" routerLink="/login">
+          <mat-icon>account_circle</mat-icon>
+      </a>
+
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+
+  <mat-drawer #drawer class="example-sidenav" [opened]="showSidebar">
+    <ul>
+      <li><a mat-button routerLink="/liste_devoirs">Liste des devoirs</a></li>
+      <li><a mat-button routerLink="/Ajout_devoir">Ajout d'un devoir</a></li>
+      <li><a mat-button routerLink="/Modification_devoir">Modification d'un devoir</a></li>
+      <li><a mat-button routerLink="/Suppression_devoir">Suppression d'un devoir</a></li>
+      <li><a mat-button routerLink="/Generation_donnees_test">Génération des données de test</a></li>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content class="content">
+  <button mat-flat-button color="primary" (click)="peuplerBDAvecForkJoin()">Peupler BD</button>
+     <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+

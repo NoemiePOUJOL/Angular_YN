@@ -1,0 +1,20 @@
+.rendu {
+    color : green;
+}
+
+.nonRendu {
+    color : red;
+}
+
+.container {
+    display : flex;
+    flex-direction : column;
+}
+
+.ajouterBtn{
+    align-self : flex-end;
+}
+
+.pagination{
+    align-self : flex-start;
+}

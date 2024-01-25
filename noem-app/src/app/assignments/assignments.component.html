@@ -1,0 +1,41 @@
+
+<main class="container">
+
+    <nav><a routerLink="/add">  
+    <button class="ajouterBtn" mat-flat-button color="accent"
+    >
+    Ajouter devoir
+    </button>
+    </a></nav>
+
+    <h2>Liste des Assignment</h2>
+    <p> Nombre total d'assignments : {{totalDocs}}</p>
+    <p> Nombre total de pages : {{totalPages}}</p>
+    <p> Nombre assignments par page : <input type="range" min=1 max=100 value=10 (change)="getAssignments()" [(ngModel)]="limit"> {{limit}}</p>
+
+<div class="pagination">
+<button mat-raised-button color="primary" (click)="premierePage()" [disabled] = "page===1">Première </button>&nbsp; 
+<button mat-raised-button color="primary" (click)="pagePrecedente()" [disabled] = "!hasPrevPage">Précédente</button>&nbsp;
+<button mat-raised-button color="primary" (click)="pageSuivante()" [disabled] = "!hasNextPage">Suivante</button>&nbsp;
+<button mat-raised-button color="primary" (click)="dernierePage()" [disabled] = "page===totalPages">Dernière</button>&nbsp;
+</div>
+
+    <mat-divider></mat-divider>
+    <mat-list *ngFor="let assignment of assignments">
+        <nav><a routerLink="/assignment/{{assignment.id}}">
+            <h3 mat-subheader>Date de rendu: {{assignment.dateDeRendu | date}}</h3>
+            <mat-list-item>
+                <p appRendu *ngIf="assignment.rendu; else nonsoumis">
+                     Devoir intitulé {{assignment.nom}} a été rendu. 
+                 </p>
+                <ng-template #nonsoumis>
+                     <p>Le devoir {{assignment.nom}} n'a pas été rendu.</p> 
+                </ng-template>
+                
+            </mat-list-item>
+        <mat-divider></mat-divider>
+        </a></nav>
+    </mat-list>
+    
+</main>
+

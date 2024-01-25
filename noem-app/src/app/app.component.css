@@ -1,0 +1,22 @@
+.right-toolbar-content {
+    margin-left: auto; /* Pousse le contenu vers la droite */
+}
+
+  .example-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .example-sidenav {
+    width: 300px; /* Largeur du tiroir*/
+    min-height: 100%; 
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 16px;
+  }
+   
+
+  
+  

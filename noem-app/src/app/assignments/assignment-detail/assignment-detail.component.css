@@ -1,0 +1,13 @@
+#bottom {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+  
+#container {
+    width: 100%;
+    min-height: 300px; /* Définissez la hauteur minimale souhaitée pour le composant */
+    margin-bottom: 10px;
+    padding: 10px;
+}
+  

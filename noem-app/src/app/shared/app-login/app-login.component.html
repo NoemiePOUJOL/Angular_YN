@@ -1,0 +1,32 @@
+
+
+  <div class="login-container">
+    <h1>Formulaire de connexion</h1>
+    <form class = "form" #loginForm="ngForm" (ngSubmit)="login(username, password)">
+
+      <mat-form-field>
+        <input matInput 
+                placeholder="Nom d'utilisateur" 
+                [(ngModel)]="username" 
+                name="username" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput 
+                type="password" 
+                placeholder="Mot de passe" 
+                [(ngModel)]="password" 
+                name="password" required>
+      </mat-form-field>
+
+      <button mat-stroked-button 
+              color="primary" 
+              [disabled]="loginForm.invalid"
+              (click) = "login(username, password)">
+        Connexion
+      </button>
+    </form>
+  </div>
+  
+
+  
