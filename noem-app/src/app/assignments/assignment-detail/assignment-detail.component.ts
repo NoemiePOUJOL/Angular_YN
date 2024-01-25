@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/shared/auth.service';
 })
 
 export class AssignmentDetailComponent implements OnInit {
+
   //@Input() assignmentTransmis! : Assignment;
   assignmentTransmis:Assignment;
 
@@ -61,6 +62,10 @@ export class AssignmentDetailComponent implements OnInit {
 
   isAdmin(): boolean {
     return this.authService.isAdmin();
+  }
+
+  isLogged(): boolean {
+    return this.authService.isLogged();
   }
 
 }

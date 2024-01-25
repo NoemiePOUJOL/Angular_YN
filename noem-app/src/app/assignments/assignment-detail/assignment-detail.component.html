@@ -12,14 +12,14 @@
 
     <button mat-flat-button color="primary" 
             (click)="onClickEdit()"
-            [disabled]="!isAdmin()"  
+            [disabled]="!isLogged()"  
     >
     Edit
     </button>
 
     <button mat-flat-button color = "primary" 
             (click)="onDelete()"
-            [disabled]="!isAdmin()"
+            [disabled]="!isAdmin()" 
     >
         Delete me 
     </button>

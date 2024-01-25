@@ -10,12 +10,16 @@ import { AssignmentsService } from './shared/assignments.service';
 })
 
 export class AppComponent {
+AuthService: any;
+isLogged() {
+throw new Error('Method not implemented.');
+}
 
 
   title = 'Application de gestion des devoirs à rendre (Assignments)';
   showSidebar = false;
 
-  constructor(private authService:AuthService, private router:Router, private assignmentService : AssignmentsService){}
+  constructor(public authService:AuthService, private router:Router, private assignmentService : AssignmentsService){}
 
   login(){
     if(this.authService.loggedIn){
