@@ -15,6 +15,10 @@ export class AddAssignmentComponent {
   nouvelAssignment: Assignment;
   nomDevoir:string ='';
   dateRendu:Date=new Date();
+  rendu:boolean = false;
+  matiere:string ='';
+  auteur:string ='';
+  note:number = 0;
 
   constructor(private assignmentService : AssignmentsService, private router:Router, private authservice:AuthService){}
 
@@ -30,7 +34,10 @@ export class AddAssignmentComponent {
   newAssignment.id = Math.floor(Math.random()*1000);
   newAssignment.nom = this.nomDevoir;
   newAssignment.dateDeRendu = this.dateRendu;
-  newAssignment.rendu = false;
+  newAssignment.rendu = this.rendu;
+  newAssignment.matiere = this.matiere;
+  newAssignment.auteur = this.matiere;
+  newAssignment.note = this.note;
 
   //this.assignments.push(newAssignment);
   //this.nouvelAssignment.emit(newAssignment);

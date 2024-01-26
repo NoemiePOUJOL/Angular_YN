@@ -52,9 +52,14 @@ export class AssignmentsService {
  
     bdInitialAssignments.forEach(a => {
       const nouvelAssignment = new Assignment();
+      nouvelAssignment.id = a.id;
       nouvelAssignment.nom = a.nom;
       nouvelAssignment.dateDeRendu = new Date(a.dateDeRendu);
       nouvelAssignment.rendu = a.rendu;
+      nouvelAssignment.matiere;
+      nouvelAssignment.auteur = a.auteur;
+      nouvelAssignment.note = a.note;
+
  
       appelsVersAddAssignment.push(this.addAssignment(nouvelAssignment))
     });

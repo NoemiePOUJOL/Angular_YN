@@ -14,6 +14,10 @@ export class EditAssignmentComponent implements OnInit{
   assignment : Assignment | undefined;
   nomAssignment : string;
   dateDeRendu : Date;
+  rendu : boolean;
+  matiere : string;
+  auteur : string;
+  note: number;
 
 
   constructor(private assignmentsService: AssignmentsService, private route: ActivatedRoute, private router:Router) {}
@@ -37,6 +41,10 @@ export class EditAssignmentComponent implements OnInit{
       this.assignment = assignment;
       this.nomAssignment = assignment.nom;
       this.dateDeRendu = assignment.dateDeRendu;
+      this.rendu = assignment.rendu;
+      this.matiere = assignment.matiere;
+      this.auteur = assignment.auteur;
+      this.note = assignment.note;
     });
   }
 

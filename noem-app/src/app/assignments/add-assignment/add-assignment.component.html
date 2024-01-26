@@ -9,6 +9,15 @@
         >
     </mat-form-field>
 
+    <mat-form-field color="accent">
+        <input matInput 
+                placeholder="matiere"
+                [(ngModel)]="matiere"
+                name="matiere"
+                placeholder="matiere" required
+        >
+    </mat-form-field>
+
     <mat-form-field appearance="fill" color="accent">
         <input matInput [matDatepicker]="picker"
                 [(ngModel)]="dateRendu"
@@ -19,6 +28,24 @@
     <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
+    <mat-form-field color="accent">
+        <input matInput 
+                placeholder="Auteur"
+                [(ngModel)]="auteur"
+                name="nom"
+                placeholder="Auteur" required
+        >
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+        <input matInput 
+                placeholder="Note"
+                [(ngModel)]="note"
+                name="note"
+                placeholder="Note" required
+        >
+    </mat-form-field>
+
     <button mat-stroked-button 
             color="accent" 
             (click)="onSubmit($event);
@@ -26,4 +53,6 @@
     >
     Ajouter un devoir 
     </button>
+
+    
 </form>
