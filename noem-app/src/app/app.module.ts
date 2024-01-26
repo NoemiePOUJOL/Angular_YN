@@ -17,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AssignmentsComponent } from './assignments/assignments.component';
@@ -73,6 +74,7 @@ const routes: Routes = [
     MatCheckboxModule,
     MatSlideToggleModule,
     MatButtonToggleModule,
+    MatSelectModule,
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule
