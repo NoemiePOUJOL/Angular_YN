@@ -1,29 +1,26 @@
-
-<div id="container">
-<mat-card *ngIf="assignmentTransmis">
-    <mat-card-title>{{assignmentTransmis.nom}}</mat-card-title>
-    <mat-card-subtitle>{{assignmentTransmis.dateDeRendu | date }}</mat-card-subtitle>
-    <img src="../../assets/imageProf/Frederic_Arnault.jpeg" alt="Photo indisponible">
-    <div id="bottom">
-    <mat-checkbox *ngIf="!assignmentTransmis.rendu"
-                    (click)="onAssignmentRendu()"
-    >
-        Devoir rendu
-    </mat-checkbox>
-    <button mat-flat-button color="primary" 
-            (click)="onClickEdit()"
-            [disabled]="!isLogged()"  
-    >
-    Edit
-    </button>
-
-    <button mat-flat-button color = "primary" 
-            (click)="onDelete()"
-            [disabled]="!isAdmin()" 
-    >
-        Delete me 
-    </button>
+<div id="container" [style.backgroundImage]="'url(' + selectImageMatiere() + ')'" [style.backgroundSize]="'cover'">
+    <div class="header">
+      <img [src]="selectImageProf()" alt="Photo indisponible">
+      <div id="nomProfesseur">{{ selectNomProf() }}</div>
     </div>
-</mat-card>
-</div>
-
+  
+    <mat-card *ngIf="assignmentTransmis">
+      <mat-card-title>{{ assignmentTransmis.nom }}</mat-card-title>
+      <mat-card-subtitle>{{ assignmentTransmis.dateDeRendu | date }}</mat-card-subtitle>
+  
+      <div id="bottom">
+        <mat-checkbox *ngIf="!assignmentTransmis.rendu" (click)="onAssignmentRendu()">
+          Devoir rendu
+        </mat-checkbox>
+  
+        <button mat-flat-button color="primary" (click)="onClickEdit()" [disabled]="!isLogged()">
+          Edit
+        </button>
+  
+        <button mat-flat-button color="primary" (click)="onDelete()" [disabled]="!isAdmin()">
+          Delete me
+        </button>
+      </div>
+    </mat-card>
+  </div>
+  

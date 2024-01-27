@@ -1,13 +1,70 @@
-#bottom {
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-}
-  
 #container {
     width: 100%;
-    min-height: 300px; /* Définissez la hauteur minimale souhaitée pour le composant */
+    min-height: 300px;
     margin-bottom: 10px;
     padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-  
+
+#container .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#container .header img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid white; /* Ajout d'une bordure blanche pour améliorer la visibilité */
+}
+
+#container #nomProfesseur {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white; /* Texte en blanc pour améliorer le contraste */
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: -30px; /* Ajustement pour empêcher le chevauchement avec l'image */
+}
+
+#container mat-card {
+    background-color: rgba(80, 80, 80, 0.8); /* Ajout d'un fond semi-transparent pour améliorer le contraste avec le texte */
+    padding: 10px;
+}
+
+#container mat-checkbox,
+#container button {
+    font-size: 14px; /* Taille de police plus petite pour les boutons et la checkbox */
+    padding: 8px 12px; /* Ajustement de la marge intérieure pour les boutons */
+}
+
+#container mat-checkbox {
+    margin-right: 10px;
+}
+
+#container #bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#container button {
+    margin-right: 10px;
+    color: pink;
+}
