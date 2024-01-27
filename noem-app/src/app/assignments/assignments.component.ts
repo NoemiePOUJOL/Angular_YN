@@ -82,6 +82,11 @@ export class AssignmentsComponent implements OnInit {
     this.router.navigate(['/assignment', assignmentId]);
   }
 
+  pageEvent(event): void {
+    this.page = event.pageIndex + 1;
+    this.limit = event.pageSize;
+    this.getAssignments();
+  }
 
 }
 

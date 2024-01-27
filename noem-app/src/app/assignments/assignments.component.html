@@ -1,6 +1,8 @@
 
 <main class="container">
 
+  <h2>Liste des Assignment</h2>
+
     <nav><a routerLink="/add">  
     <button class="ajouterBtn" mat-flat-button color="accent"
     >
@@ -8,20 +10,9 @@
     </button>
     </a></nav>
 
-    <h2>Liste des Assignment</h2>
-    <p> Nombre total d'assignments : {{totalDocs}}</p>
-    <p> Nombre total de pages : {{totalPages}}</p>
-    <p> Nombre assignments par page : <input type="range" min=1 max=100 value=10 (change)="getAssignments()" [(ngModel)]="limit"> {{limit}}</p>
-
-<div class="pagination">
-<button mat-raised-button color="primary" (click)="premierePage()" [disabled] = "page===1">Première </button>&nbsp; 
-<button mat-raised-button color="primary" (click)="pagePrecedente()" [disabled] = "!hasPrevPage">Précédente</button>&nbsp;
-<button mat-raised-button color="primary" (click)="pageSuivante()" [disabled] = "!hasNextPage">Suivante</button>&nbsp;
-<button mat-raised-button color="primary" (click)="dernierePage()" [disabled] = "page===totalPages">Dernière</button>&nbsp;
-</div>
-
-
-    <table mat-table [dataSource]="assignments" class="mat-elevation-z8 demo-table">
+  
+  <div class="mat-elevation-z8 demo-table">
+    <table mat-table [dataSource]="assignments">
         <!-- Id Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
@@ -71,7 +62,16 @@
             *matRowDef="let row; columns: displayedColumns;"
         ></tr>
       </table>
+
+      <mat-paginator
+               [length]="totalDocs"
+               [pageSize]="limit"
+               [pageSizeOptions]="[5, 10, 20]"
+               (page)="pageEvent($event)"
+               showFirstLastButtons
+               aria-label="Select page of periodic elements">
+      </mat-paginator>
        
-    
+  </div> 
 </main>
 

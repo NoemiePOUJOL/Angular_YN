@@ -19,6 +19,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 import { AssignmentsComponent } from './assignments/assignments.component';
@@ -77,6 +78,7 @@ const routes: Routes = [
     MatButtonToggleModule,
     MatSelectModule,
     MatTableModule,
+    MatPaginatorModule,
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule
