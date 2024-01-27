@@ -15,6 +15,16 @@ export class AssignmentDetailComponent implements OnInit {
   //@Input() assignmentTransmis! : Assignment;
   assignmentTransmis:Assignment;
 
+  //mapping entre matiere et les autres matières
+  mapNomProf = new Map<string, string>();
+  mapImageMatiere = new Map<string, string>();
+  mapImageProf = new Map<string, string>();
+
+  listeNomProf = ["Arnault", "Galli", "Tounsi", "Buffa", "Donati"];
+  listeImageMatière = ["Communication.jpg", "Base_de_donnees.jpg", "Management_du_numerique.jpg", "IA.jpg","Outils_mathematiques.jpg"]
+  listeImageProf = ["Frederic_Arnault.jpeg","Gregory_Galli.jpeg","Stephane_Tounsi.jpeg","Michel_Buffa.jpeg","Leo_Donati.jpeg"]
+  listeMatiere = ["Communication","Base de données","Management du numérique", "IA","Outils mathématiques"]
+
   constructor(public authService : AuthService, private assignmentsService: AssignmentsService, private route: ActivatedRoute, private router:Router) {}
 
   ngOnInit(): void {
@@ -66,6 +76,36 @@ export class AssignmentDetailComponent implements OnInit {
 
   isLogged(): boolean {
     return this.authService.isLogged();
+  }
+
+  selectImageProf(): string {
+    const path = "../../assets/imageProf/"
+    switch(this.assignmentTransmis.matiere) { 
+      case "Communication": { 
+        return path+"Frederic_Arnault.jpeg";
+         break; 
+      } 
+      case "Base de données": { 
+        return path+"Gregory_Galli.jpeg";
+         break; 
+      } 
+      case "Donati": { 
+        return path+"Leo_Donati.jpeg";
+         break; 
+      } 
+      case "Buffa": { 
+        return path+"Leo_Donati.jpeg";
+         break; 
+      } 
+      case "Tounsi": { 
+        return path+"Leo_Donati.jpeg";
+         break; 
+      } 
+      default: { 
+        return null;
+        break; 
+      } 
+   } 
   }
 
 }
