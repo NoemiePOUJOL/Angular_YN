@@ -18,3 +18,41 @@
 .pagination{
     align-self : flex-start;
 }
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+}
+
+.demo-table {
+    width: 100%;
+    margin-bottom: 50px; 
+    margin-top: 50px;
+}
+
+.mat-column-demo-position {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+}
+  
+.mat-column-demo-name {
+    padding-left: 16px;
+    font-size: 20px;
+}
+  
+.mat-column-demo-weight {
+    font-style: italic;
+}
+  
+.mat-column-demo-symbol {
+    width: 32px;
+    text-align: center;
+    font-weight: bold;
+}

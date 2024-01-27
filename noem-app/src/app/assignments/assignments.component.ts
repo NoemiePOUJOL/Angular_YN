@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Assignment } from './assignment.model';
 import { AssignmentsService } from '../shared/assignments.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-assignments',
@@ -13,11 +14,14 @@ export class AssignmentsComponent implements OnInit {
   ajoutActive = false;
   assignmentSelectionne! :Assignment;
   //formVisible = true; 
+
+  //Pour l'affichage en table 
+  displayedColumns: string[] = ['id', 'nom', 'dateDeRendu', 'rendu', 'matiere', 'auteur','note'];
   assignments :Assignment[] = [];
 
   //Pour la pagination
   page : number = 1;
-  limit : number = 2;
+  limit : number = 10;
   totalDocs : number;
   totalPages : number;
   hasPrevPage : boolean;
@@ -25,7 +29,7 @@ export class AssignmentsComponent implements OnInit {
   hasNextPage : boolean;
   nextPage : number;
 
-  constructor(private assignmentsService:AssignmentsService) { }
+  constructor(private assignmentsService:AssignmentsService, private router:Router) { }
 
   ngOnInit() : void {
     this.getAssignments();
@@ -73,6 +77,12 @@ export class AssignmentsComponent implements OnInit {
     this.getAssignments();
     
   }
+
+  navigateToAssignment(assignmentId: number) {
+    this.router.navigate(['/assignment', assignmentId]);
+  }
+
+
 }
 
 

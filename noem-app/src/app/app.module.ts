@@ -18,6 +18,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 
 
 import { AssignmentsComponent } from './assignments/assignments.component';
@@ -75,6 +76,7 @@ const routes: Routes = [
     MatSlideToggleModule,
     MatButtonToggleModule,
     MatSelectModule,
+    MatTableModule,
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule

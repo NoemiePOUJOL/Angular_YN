@@ -36,7 +36,7 @@ export class AddAssignmentComponent {
   newAssignment.dateDeRendu = this.dateRendu;
   newAssignment.rendu = this.rendu;
   newAssignment.matiere = this.matiere;
-  newAssignment.auteur = this.matiere;
+  newAssignment.auteur = this.auteur;
   newAssignment.note = this.note;
 
   //this.assignments.push(newAssignment);
