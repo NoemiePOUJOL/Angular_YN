@@ -27,29 +27,29 @@
     height: auto;
     margin-bottom: 10px;
     border-radius: 50%;
-    border: 2px solid white; /* Ajout d'une bordure blanche pour améliorer la visibilité */
+    border: 2px solid white; 
 }
 
 #container #nomProfesseur {
     font-size: 18px;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white; /* Texte en blanc pour améliorer le contraste */
+    color: white; 
     padding: 5px;
     border-radius: 5px;
     width: 100%;
-    margin-top: -30px; /* Ajustement pour empêcher le chevauchement avec l'image */
+    margin-top: -30px; 
 }
 
 #container mat-card {
-    background-color: rgba(80, 80, 80, 0.8); /* Ajout d'un fond semi-transparent pour améliorer le contraste avec le texte */
+    background-color: rgba(80, 80, 80, 0.8); 
     padding: 10px;
 }
 
 #container mat-checkbox,
 #container button {
-    font-size: 14px; /* Taille de police plus petite pour les boutons et la checkbox */
-    padding: 8px 12px; /* Ajustement de la marge intérieure pour les boutons */
+    font-size: 14px; 
+    padding: 8px 12px; 
 }
 
 #container mat-checkbox {
