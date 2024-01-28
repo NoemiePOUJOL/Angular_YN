@@ -15,8 +15,8 @@ export class AssignmentsService {
 
   assignments : Assignment[] = []
 
-  url = "http://localhost:8010/api/assignments";
-  //url = "https://serverjs-naxx.onrender.com/api/assignments";
+  //url = "http://localhost:8010/api/assignments";
+  url = "https://serverjs-naxx.onrender.com/api/assignments";
 
   getAssignments(): Observable<Assignment[]>{
     return this.http.get<Assignment[]>(this.url); 
