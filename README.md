@@ -6,7 +6,7 @@ Pour installer et lancer le projet localement, suivez ces étapes :
 
 1. Cloner le dépôt :
 ```
-git clone
+git clone https://github.com/NoemiePOUJOL/Angular_YN.git
 ```
 
 2. Installer les dépendances : dans le répertoire du projet
