@@ -20,6 +20,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 
 
 import { AssignmentsComponent } from './assignments/assignments.component';
@@ -35,6 +38,7 @@ import { AppLoginComponent } from './shared/app-login/app-login.component';
 import { AuthService } from './shared/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListeProfesseurComponent } from './liste-professeur/liste-professeur.component';
+import { DialogConfirmationComponent } from './dialog-confirmation/dialog-confirmation.component';
 
 const routes: Routes = [
   //home page, ce qui sera affiché avec http://localhost:4200
@@ -60,6 +64,7 @@ const routes: Routes = [
     EditAssignmentComponent,
     AppLoginComponent,
     ListeProfesseurComponent,
+    DialogConfirmationComponent,
     
   ],
   imports: [
@@ -82,6 +87,7 @@ const routes: Routes = [
     MatSelectModule,
     MatTableModule,
     MatPaginatorModule,
+    MatDialogModule,
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule

@@ -3,6 +3,9 @@ import { Assignment } from '../assignment.model';
 import {AssignmentsService} from '../../shared/assignments.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogConfirmationComponent } from '../../dialog-confirmation/dialog-confirmation.component';
+
 
 @Component({
   selector: 'app-assignment-detail',
@@ -27,7 +30,7 @@ export class AssignmentDetailComponent implements OnInit {
 
   
 
-  constructor(public authService : AuthService, private assignmentsService: AssignmentsService, private route: ActivatedRoute, private router:Router) {}
+  constructor(public authService : AuthService, private assignmentsService: AssignmentsService, private route: ActivatedRoute, private router:Router, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     const id= +this.route.snapshot.params['id'];
@@ -57,18 +60,7 @@ export class AssignmentDetailComponent implements OnInit {
     }
   }
 
-  onDelete(){
-    if(this.assignmentTransmis){
-      this.assignmentsService.deleteAssignment(this.assignmentTransmis)
-      .subscribe(reponse => {
-        console.log ("Réponse du serveur :" + reponse.message);
-
-        this.router.navigate(["/home"]);
-      });
-      this.assignmentTransmis = undefined;
-    }
-  }
-
+ 
   onClickEdit() {
     this.router.navigate(["/assignment", this.assignmentTransmis.id, 'edit'],
     {queryParams:{nom:this.assignmentTransmis.nom},fragment : 'edition'});
@@ -134,6 +126,30 @@ export class AssignmentDetailComponent implements OnInit {
       this.mapNomProf.set(matiere, nomProf);
       this.mapImageMatiere.set(matiere, imageMatiere);
       this.mapImageProf.set(matiere, imageProf);
+    }
+  }
+
+  onDelete() {
+    const dialogRef = this.dialog.open(DialogConfirmationComponent, {
+      width: '400px',
+      data: 'Etes-vous sûr de vouloir supprimer cet assignment ?'
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.performDelete(); // Appeler la suppression si l'utilisateur a cliqué sur "Oui"
+      }
+    });
+  }
+  
+  private performDelete() {
+    if (this.assignmentTransmis) {
+      this.assignmentsService.deleteAssignment(this.assignmentTransmis)
+        .subscribe(reponse => {
+          console.log("Réponse du serveur :" + reponse.message);
+          this.router.navigate(["/home"]);
+        });
+      this.assignmentTransmis = undefined;
     }
   }
 

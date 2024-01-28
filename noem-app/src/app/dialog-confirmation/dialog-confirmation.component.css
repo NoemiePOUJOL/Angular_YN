@@ -1,0 +1,9 @@
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+.no-button {
+    margin-right: 10px; 
+}
