@@ -34,6 +34,7 @@ import { EditAssignmentComponent } from './assignments/edit-assignment/edit-assi
 import { AppLoginComponent } from './shared/app-login/app-login.component';
 import { AuthService } from './shared/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ListeProfesseurComponent } from './liste-professeur/liste-professeur.component';
 
 const routes: Routes = [
   //home page, ce qui sera affiché avec http://localhost:4200
@@ -43,7 +44,8 @@ const routes: Routes = [
   {path:'add', component: AddAssignmentComponent},
   {path:'assignment/:id', component: AssignmentDetailComponent},
   {path:'assignment/:id/edit', component:EditAssignmentComponent, canActivate : [AuthGuard]},
-  {path:'login', component: AppLoginComponent}
+  {path:'login', component: AppLoginComponent},
+  {path:'liste_professeur', component: ListeProfesseurComponent}
 
 ];
 
@@ -57,6 +59,7 @@ const routes: Routes = [
     AddAssignmentComponent,
     EditAssignmentComponent,
     AppLoginComponent,
+    ListeProfesseurComponent,
     
   ],
   imports: [

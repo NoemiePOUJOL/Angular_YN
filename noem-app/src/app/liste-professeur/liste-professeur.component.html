@@ -1,0 +1,26 @@
+<div class="profs-container">
+    <div
+      *ngFor="let prof of listeNomProf; let i = index"
+      class="prof-card"
+    >
+      <div class="prof-content">
+        <div class="prof-text">
+          <h3 class="prof-title"> {{listeNomProf[i]}} {{listePrenomProf[i]}}</h3>
+          <div class="prof-info">
+            <p><strong>Nom :</strong> {{listeNomProf[i]}}</p>
+            <p><strong>prénom :</strong> {{listePrenomProf[i]}}</p>
+            <p><strong>Email :</strong> {{listePrenomProf[i]}}.{{listeNomProf[i]}}"&#64;"etu-unice.fr</p>
+          </div>
+        </div>
+        <div class="prof-image">
+            <img [src]="path+listeImageProf[i]" alt="Image du professeur">
+        </div>
+      </div>
+    </div>
+    <mat-paginator 
+    [length]="listeNomProf.length"
+    [pageSize]=5
+    [pageSizeOptions]="[5, 10, 20]"
+    (page)="pageEvent($event)">
+  </mat-paginator>
+  </div>
