@@ -16,7 +16,7 @@ export class AssignmentsComponent implements OnInit {
   //formVisible = true; 
 
   //Pour l'affichage en table 
-  displayedColumns: string[] = ['id', 'nom', 'dateDeRendu', 'rendu', 'matiere', 'auteur','note'];
+  displayedColumns: string[] = ['id', 'nom', 'dateDeRendu', 'rendu', 'matiere', 'auteur'];
   assignments :Assignment[] = [];
 
   //Pour la pagination

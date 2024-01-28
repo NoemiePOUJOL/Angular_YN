@@ -20,7 +20,7 @@ export class AssignmentDetailComponent implements OnInit {
   mapImageMatiere = new Map<string, string>();
   mapImageProf = new Map<string, string>();
 
-  listeNomProf = ["Arnault", "Galli", "Tounsi", "Buffa", "Donati"];
+  listeNomProf = ["F. Arnault", "G. Galli", "S. Tounsi", "M. Buffa", "L. Donati"];
   listeImageMatiere = ["Communication.jpg", "Base_de_donnees.jpg", "Management_du_numerique.jpg", "IA.jpg","Outils_mathematiques.jpg"]
   listeImageProf = ["Frederic_Arnault.jpeg","Gregory_Galli.jpeg","Stephane_Tounsi.jpeg","Michel_Buffa.jpeg","Leo_Donati.jpeg"]
   listeMatiere = ["Communication","Base de donnees","Management du numerique", "IA","Outils mathematiques"]

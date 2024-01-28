@@ -3,7 +3,7 @@
   <button mat-icon-button class="example-icon" aria-label="Sidebar" (click)="showSidebar = !showSidebar">
     <mat-icon>more_vert</mat-icon>
   </button>
-  <h1><a routerLink="/home">{{title}}</a></h1>
+  <h1>{{title}}</h1>
   <span class="example-spacer"></span>
   <div class="right-toolbar-content">
 
@@ -35,7 +35,6 @@
     </ul>
   </mat-drawer>
   <mat-drawer-content class="content">
-  <button mat-flat-button color="primary" (click)="peuplerBDAvecForkJoin()" [disabled]=true>Peupler BD</button>
      <router-outlet></router-outlet>
   </mat-drawer-content>
 
