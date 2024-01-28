@@ -37,3 +37,4 @@ Visitez le [projet sur Render.com](https://assignement-manager.onrender.com) pou
 
 ## Vidéo de présentation du projet
 
+[Le lien de la vidéo](https://github.com/NoemiePOUJOL/Angular_YN/blob/main/Video_Angular_Noemie_Youssef.mp4)
