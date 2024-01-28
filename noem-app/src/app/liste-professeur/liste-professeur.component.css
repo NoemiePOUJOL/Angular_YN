@@ -1,0 +1,57 @@
+.profs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .prof-card {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .prof-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .prof-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .prof-text {
+    padding: 10px;
+  }
+  
+  .prof-title {
+    margin: 0;
+  }
+  
+  .prof-info {
+    margin-top: 10px;
+  }
+  
+  .prof-info p {
+    margin: 5px 0;
+  }
+  
+  .prof-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .mat-paginator {
+    margin-top: 20px;
+  }
+  
+  /* Ajoutez ces styles si vous voulez centrer la pagination */
+  .mat-paginator {
+    margin: 20px auto;
+    text-align: center;
+  }
+  
