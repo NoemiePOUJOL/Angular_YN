@@ -34,3 +34,6 @@ Visitez le [projet sur Render.com](https://assignement-manager.onrender.com) pou
 
 - Youssef Ansari
 - Noémie Poujol
+
+## Vidéo de présentation du projet
+
