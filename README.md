@@ -23,8 +23,8 @@ npm run start
 ```
 Après ces étapes, votre application devrait être en cours d'exécution sur votre machine locale à l'adresse [http://localhost:8081/home](http://localhost:8081/home). Les comptes disponibles sur le projet sont :
 
-- **Etudiants** : login : user | mot de passe : user
-- **Professeur** : login : admin | mot de passe : admin
+- **Etudiants** : login : user1 | mot de passe : password1
+- **Professeur** : login : admin | mot de passe : adminpassword
 
 ## Version en Ligne
 
